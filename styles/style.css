@@ -1,0 +1,21 @@
+.vertical-nav{
+    min-height: 100%;
+    background-color: #999;
+    justify-content: center;
+}
+
+.nav-bar{
+    background-color: #999;
+}
+
+.nav-bar-links{
+    list-style-type: none;
+}
+
+.nav-bar-link{
+    
+}
+
+.content{
+    background-color: red;
+}
