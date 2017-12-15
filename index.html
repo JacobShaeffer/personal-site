@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="col-md-12">
@@ -19,15 +20,18 @@
 
             <div class="vertical-nav d-none d-md-block col-md-2 position-fixed no-gutters">
                 <div class="nav-bar">
-                    <ul class="nav-bar-links">
-                        <li class="nav-bar-link">
-                            <a href="#">Link 1</a>
+                    <ul class="nav-bar-links" id="navBar">
+                        <li class="nav-bar-link active">
+                            <a href="#Me">Me</a>
                         </li>
                         <li class="nav-bar-link">
-                            <a href="#">Link 2</a>
+                            <a href="#Projects">Projects</a>
                         </li>
                         <li class="nav-bar-link">
-                            <a href="#">Link 3</a>
+                            <a href="#Education">Education</a>
+                        </li>
+                        <li class="nav-bar-link">
+                            <a href="#Employment">Employment</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +48,7 @@
                 
                 <div class="row">
                     <div class="container">
-                        <div class="row">
+                        <!--div class="row">
                             <div class="col-sm-4">
                                 <h3>Column 1</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
@@ -60,7 +64,44 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
                                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
                             </div>
+                        </div-->
+                        
+
+                        <div class="row section" id="Me">
+                            <div class="col-sm-4 offset-sm-4">
+                                <h3>Me</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                            </div>
                         </div>
+
+                        <div class="row section" id="Projects">
+                            <div class="col-sm-4 offset-sm-4">
+                                <h3>Projects</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                            </div>
+                        </div>
+
+                        <div class="row section" id="Education">
+                            <div class="col-sm-4 offset-sm-4">
+                                <h3>Education</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                            </div>
+                        </div>
+
+
+                        <div class="row section" id="Employment">
+                            <div class="col-sm-4 offset-sm-4">
+                                <h3>Employment</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
