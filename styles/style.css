@@ -19,25 +19,47 @@
     border-bottom:3px solid #F00;
 }
 
-.section-title{
-    font-size: 32px;
+.section-title-fixed{
+    position: fixed;
+    left: 0;
+    font-size: 48px;
+    text-align: center;
 }
 
-.section-display{
-    position: fixed;
-    width: 100%;
-    width: 100vh;
+.section-title{
+    font-size: 48px;
+    text-align: center;
+}
+
+.section-display-text{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+#section-display-text-me{
+    font-size: 1em;
+}
+#section-display-text-projects{
+    font-size: 0.66em;
+}
+#section-display-text-education{
+    font-size: 0.44em;
+}
+#section-display-text-employment{
+    font-size: 0.293em;
 }
 
 #section-display-me{
-    top: 0;
+    bottom: 1.393em;
 }
 #section-display-projects{
-    top: 3.16em;
+    bottom: 0.733em;
 }
 #section-display-education{
-    top: 6.32em;
+    bottom: 0.293em;
 }
 #section-display-employment{
-    top: 9.48em;
+    bottom: 0;
 }
