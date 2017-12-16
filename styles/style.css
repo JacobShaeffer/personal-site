@@ -1,19 +1,9 @@
-.vertical-nav{
+.vertical-center{
     min-height: 100%;
-    background-color: #999;
-    justify-content: center;
-}
-
-.nav-bar{
-    background-color: #999;
-}
-
-.nav-bar-links{
-    list-style-type: none;
-}
-
-.nav-bar-link{
+    min-height: 100vh;
     
+    display: flex;
+    align-items: center;
 }
 
 .content{
@@ -27,4 +17,27 @@
 .active a{
     color:#f00;
     border-bottom:3px solid #F00;
+}
+
+.section-title{
+    font-size: 32px;
+}
+
+.section-display{
+    position: fixed;
+    width: 100%;
+    width: 100vh;
+}
+
+#section-display-me{
+    top: 0;
+}
+#section-display-projects{
+    top: 3.16em;
+}
+#section-display-education{
+    top: 6.32em;
+}
+#section-display-employment{
+    top: 9.48em;
 }
