@@ -1,34 +1,38 @@
 var sectionTitles;
 
 function unnammed(){
+    var windowBot = $(window).scrollTop() + $(window).height() - 50;//TODO: make the +50 dynamic to the element
     for(var i=0; i<sectionTitles.length; i++) {
-        $(sectionTitles[i]).css()
-        //console.log(i + ": " + $(sectionTitles[i]).parent().offset().top);
-        if($(sectionTitles[i]).parent().offset().top <= ($(window).scrollTop() + $(window).height() - 50)){
+        var top = $(sectionTitles[i]).parent().offset().top;
+        if(top <= windowBot){
             $(sectionTitles[i]).addClass("section-title");
             $(sectionTitles[i]).removeClass("section-title-fixed");
             $(sectionTitles[i]).css({"bottom": "auto"});
+        }
+        else{
+            $(sectionTitles[i]).addClass("section-title-fixed");
+            $(sectionTitles[i]).removeClass("section-title");
+            $(sectionTitles[i]).css({"bottom": ""});
         }
     }
 }
 
 function onScroll(){
-    //console.log("scrollTop: " + $(window).scrollTop());
     unnammed();
 }
 
 function main(){
     console.log("running");
-    sectionTitles = $(".section-title-fixed");
+    sectionTitles = $(".section-title");
     sections = $(".section");
 
     unnammed();
 
     $(window).scroll(
-        $.throttle(10, () => {
+        $.throttle(10, function(){
             onScroll();
         })
     );
 }
 
-$(document).ready(() => {main();});
+$(document).ready(function(){main();});
