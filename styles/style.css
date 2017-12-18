@@ -10,6 +10,10 @@
     
 }
 
+.outlined{
+    border: 1px solid red;
+}
+
 .section{
     height: 100vh;
 }
@@ -18,6 +22,10 @@
     color:#f00;
     border-bottom:3px solid #F00;
 }
+
+.section-title-container{
+     height: 72px;
+ }
 
 .section-title-fixed{
     position: fixed;
@@ -42,24 +50,24 @@
     font-size: 1em;
 }
 #section-display-text-projects{
-    font-size: 0.66em;
+    font-size: 1em;/*0.66*/
 }
 #section-display-text-education{
-    font-size: 0.44em;
+    font-size: 1em;/*0.44*/
 }
 #section-display-text-employment{
-    font-size: 0.293em;
+    font-size: 1em;/*0.293*/
 }
 
 #section-display-me{
-    bottom: 1.393em;
+    bottom: auto;/*1.393em*/
 }
 #section-display-projects{
-    bottom: 0.733em;
+    bottom: auto;/*0.733em*/
 }
 #section-display-education{
-    bottom: 0.293em;
+    bottom: auto;/*0.293em*/
 }
 #section-display-employment{
-    bottom: 0;
+    bottom: auto;/*0*/
 }

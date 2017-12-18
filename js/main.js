@@ -4,7 +4,8 @@ function unnammed(){
     var windowBot = $(window).scrollTop() + $(window).height() - 50;//TODO: make the +50 dynamic to the element
     for(var i=0; i<sectionTitles.length; i++) {
         var top = $(sectionTitles[i]).parent().offset().top;
-        if(top <= windowBot){
+        var bottom = parseInt($(sectionTitles[i]).css("bottom").slice(0, -2));
+        if(top <= windowBot){// - bottom){
             $(sectionTitles[i]).addClass("section-title");
             $(sectionTitles[i]).removeClass("section-title-fixed");
             $(sectionTitles[i]).css({"bottom": "auto"});
@@ -35,4 +36,4 @@ function main(){
     );
 }
 
-$(document).ready(function(){main();});
+///$(document).ready(function(){main();});
