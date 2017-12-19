@@ -1,9 +1,24 @@
 var sectionTitles;
 var botValues = [0,0,0,0];
 var fontValues = [0,0,0,0];//[ 1, 0.66, 0.44, 0.293 ];
-var bottoms = [ 66, 35, 14, 0 ];
+//var bottoms = [ 66, 35, 14, 0 ];
+var catagories;
 
 function setup(){
+    sectionTitles = $(".section-title");
+    sections = $(".section");
+    catagories = [ "me", "projects", "education", "employment" ];
+
+    //$("#test").on('click', function() { $("HTML, BODY").animate({ scrollTop: 0 }, 500); });
+    for(var i=0; i<catagories.length; i++){
+        let top = $("#" + catagories[i]).offset().top;
+        $('a[href="#' + catagories[i] +'"]').on('click', function(e){
+            console.log("clicked");
+            e.stopPropagation();
+            $("HTML, BODY").animate({scrollTop: top}, 750);
+        })
+    }
+
     for(var i=0; i<sectionTitles.length; i++) {
         var title = sectionTitles[i];
         $(title).removeClass("section-title");
@@ -13,7 +28,6 @@ function setup(){
 
 function cssHasJavascript(){
     var base = "#section-display-text-";
-    var catagories = [ "me", "projects", "education", "employment" ];
     for(var i=0; i<catagories.length; i++){
         $(base + catagories[i]).css("font-size", fontValues[i] + "em");
     }
@@ -70,9 +84,6 @@ function onScroll(){
 }
 
 function main(){
-
-    sectionTitles = $(".section-title");
-    sections = $(".section");
 
     setup();
     unnammed();

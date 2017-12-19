@@ -6,8 +6,11 @@
     align-items: center;
 }
 
-.content{
-    
+a.scroll-to{
+    color: green;
+}
+a.scroll-to:hover{
+    color: red;
 }
 
 .outlined{
