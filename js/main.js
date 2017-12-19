@@ -1,5 +1,5 @@
 var sectionTitles;
-var botValues = [0,0,0,0];
+var botValues = [1.81, 1.47, 0.83, 0];
 var fontValues = [0,0,0,0];//[ 1, 0.66, 0.44, 0.293 ];
 //var bottoms = [ 66, 35, 14, 0 ];
 var catagories;
@@ -13,8 +13,7 @@ function setup(){
     for(var i=0; i<catagories.length; i++){
         let top = $("#" + catagories[i]).offset().top;
         $('a[href="#' + catagories[i] +'"]').on('click', function(e){
-            console.log("clicked");
-            e.stopPropagation();
+            e.preventDefault();
             $("HTML, BODY").animate({scrollTop: top}, 750);
         })
     }

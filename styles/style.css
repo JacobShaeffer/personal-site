@@ -21,11 +21,6 @@ a.scroll-to:hover{
     height: 100vh;
 }
 
-.active a{
-    color:#f00;
-    border-bottom:3px solid #F00;
-}
-
 .section-title-container{
      height: 72px;
  }
