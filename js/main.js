@@ -1,13 +1,15 @@
 var sectionTitles;
-var botValues =  /*[1.393, 1.1, 0.66, 0];//[1.393, 1.1, 0.66, 0];//[1.393, 1.1, 0.44, 0];/*/[ 1.393, 0.733, 0.293, 0 ];//TODO: updates these values based on window position
-var fontValues = /*[1,1,1,1];            //[1, 1, 1, 0.66];      //[1, 1, 0.66, 0.44];   /*/[ 1, 0.66, 0.44, 0.293 ];//TODO: updates these values based on window position
-var bottoms =    /*[66, 52, 31, 0];      //[66, 52, 31, 0];      //[66,52,21,0];         /*/[ 66, 35, 14, 0 ];
+var botValues = [0,0,0,0];
+var fontValues = [0,0,0,0];//[ 1, 0.66, 0.44, 0.293 ];
+var bottoms = [ 66, 35, 14, 0 ];
 
-
-/*var a = 110.26/1611298464;
-var b = (-0.22 - 508741404.2/1611298464)/928;
-var c = -130759539.2/1611298464 - 1089 * b;*/
-
+function setup(){
+    for(var i=0; i<sectionTitles.length; i++) {
+        var title = sectionTitles[i];
+        $(title).removeClass("section-title");
+        $(title).addClass("section-title-fixed");
+    }
+}
 
 function cssHasJavascript(){
     var base = "#section-display-text-";
@@ -18,41 +20,49 @@ function cssHasJavascript(){
 }
 
 function unnammed(){
-    var windowBot = $(window).scrollTop() + $(window).height();//TODO: make the +50 dynamic to the element
-    
-    /*for(var i=0; i<fontValues.length; i++){
-        var temp = fontValues[i]*windowBot/1000;
-        fontValues[i] = temp > 1 ? 1 : temp;
-    }
-    cssHasJavascript();*/
+    var windowBot = $(window).scrollTop() + $(window).height();
     
     for(var i=0; i<sectionTitles.length; i++) {
         var title = sectionTitles[i];
         var top = $(title).parent().offset().top;
-        var temp = parseInt($(title).css("bottom").slice(0, -2))
-        bottoms[i] = temp > 0 ? temp : bottoms[i];
 
-        var dynamicSpacing = bottoms[i] + $(title).height();
-        //var spacing = 138;
+        var dynamicSpacing = (botValues[i] * 48) + $(title).height();//Fixme: Somthing wierd is going on here
 
-        if(top <= windowBot - dynamicSpacing){// - bottom){
+        //set the fonts of the titles as the page scrolls
+        var distance = top - windowBot;
+        var truncated = distance > 0 ? distance : 0;
+        var zeroOne = truncated * 0.85 / 3300;
+        fontValues[i] = 1 - zeroOne;
+        
+
+        if(top <= windowBot - dynamicSpacing){
             if($(title).hasClass("section-title-fixed")){
-                console.log(windowBot);
                 $(title).addClass("section-title");
                 $(title).removeClass("section-title-fixed");
-                $(title).css({"bottom": "auto"});
+                $(title).css({"bottom": "0px"});
             }
         }
-        else{//if(top > windowBot - spacing){
+        else{
             if($(title).hasClass("section-title")){
                 $(title).addClass("section-title-fixed");
                 $(title).removeClass("section-title");
-                $(title).css({"bottom": botValues[i] + "em"});
+                $(title).css({"bottom": "1px"});
             }
         }
-        $(".debug"+i).text( "t: " + top + "   b: " + bottoms[i] + "   d: " + dynamicSpacing );
     }
-    $(".debug").text("windowBot: " + windowBot);
+
+    for(var i=0; i<sectionTitles.length; i++){
+        //console.log($(sectionTitles[i]).css("bottom"));
+        var title = $(sectionTitles[i]);
+        if($(sectionTitles[i]).css("bottom") != "0px"){
+            botValues[i] = 0;
+            for(var j=3; j>i; j--){
+                botValues[i] += fontValues[j];
+            }
+            $(sectionTitles[i]).css("bottom", botValues[i] + "em");
+        }
+    }
+    cssHasJavascript();
 }
 
 function onScroll(){
@@ -60,15 +70,11 @@ function onScroll(){
 }
 
 function main(){
-    var temp = $(".outlined");
-    for(var i=0; i<temp.length; i++){
-        console.log($(temp).offset().top);
-    }
 
     sectionTitles = $(".section-title");
     sections = $(".section");
 
-    cssHasJavascript();
+    setup();
     unnammed();
 
     $(window).scroll(
