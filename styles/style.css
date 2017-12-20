@@ -39,35 +39,19 @@ a.scroll-to:hover{
     bottom: auto;
 }
 
-.section-display-text{
+
+.moving-title{
+
+}
+
+.moving-title .section-title{
+    bottom: auto;
+}
+
+.moving-title .section-title .section-display-text{
     display: block;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-}
-
-#section-display-text-me{
     font-size: 1em;
-}
-#section-display-text-projects{
-    font-size: 1em;/*0.66*/
-}
-#section-display-text-education{
-    font-size: 1em;/*0.44*/
-}
-#section-display-text-employment{
-    font-size: 1em;/*0.293*/
-}
-
-#section-display-me{
-    bottom: auto;/*1.393em*/
-}
-#section-display-projects{
-    bottom: auto;/*0.733em*/
-}
-#section-display-education{
-    bottom: auto;/*0.293em*/
-}
-#section-display-employment{
-    bottom: auto;/*0*/
 }
