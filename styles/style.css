@@ -14,8 +14,8 @@ a.scroll-to:hover{
     text-decoration: none;
 }
 
-.outlined{
-    /*border: 1px solid red;*/
+hr{
+    border-top: 1px solid black;
 }
 
 .section{
@@ -39,11 +39,6 @@ a.scroll-to:hover{
     bottom: auto;
 }
 
-
-.moving-title{
-
-}
-
 .moving-title .section-title{
     bottom: auto;
 }
@@ -54,4 +49,17 @@ a.scroll-to:hover{
     margin-right: 0;
     font-weight: bold;
     font-size: 1em;
+}
+
+#me{
+    background-color: #8cff9f;
+}
+#projects{
+    background-color: #ffa38c;
+}
+#education{
+    background-color: #8cb8ff;
+}
+#employment{
+    background-color: #ffff87;
 }

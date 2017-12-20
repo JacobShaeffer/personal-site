@@ -1,5 +1,5 @@
 var sectionTitles;
-var botValues = [1.81, 1.47, 0.83, 0];
+var botValues = [];// = [1.81, 1.47, 0.83, 0];
 var fontValues = [];
 var isFixed = [];
 var movingTitles;
@@ -10,9 +10,7 @@ function setup(){
 
     for(var i=0; i<movingTitles.length; i++){
         let top = $(movingTitles[i]).offset().top;
-        console.log('a[href="#mt_' + i +'"]');
         $('a[href="#mt_' + i +'"]').on('click', function(e){
-            console.log("click");
             e.preventDefault();
             $("HTML, BODY").animate({scrollTop: top}, 750);
         })
@@ -22,8 +20,9 @@ function setup(){
         var title = sectionTitles[i];
         $(title).removeClass("section-title");
         $(title).addClass("section-title-fixed");
-        fontValues.push(0);// = new Array(catagories.length);
-        isFixed.push(true);// = new Array(catagories.length);
+        fontValues.push(0);
+        isFixed.push(true);
+        botValues.push(0);
     }
 }
 
