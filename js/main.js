@@ -44,7 +44,7 @@ function unnammed(){
         //set the fonts of the titles as the page scrolls
         var distance = top - windowBot;
         var truncated = distance > 0 ? distance : 0;
-        var zeroOne = truncated * 0.85 / 3300;
+        var zeroOne = truncated * 0.85 / ($(document).height() * 3 / 4);
         fontValues[i] = 1 - zeroOne;
         
 
