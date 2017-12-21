@@ -7,12 +7,67 @@
 }
 
 .dev{
-    border: 2px solid red;
-    margin: 0 auto;
+    
+}
+
+.interactive-box{
+    position: relative;
+    display: block;
+    min-height: 210px;
+    top: 0px;
+    left: 0px;
+    margin: 15px;
+    padding: 3px;
+    box-shadow: 0px 1px 2px #808080;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@media screen and (max-width: 575px) {/*<=small*/
+    .interactive-box{
+        min-height: 150px;
+    }
+}
+@media screen and (min-width: 768px) {/*>=medium*/
+    .interactive-box{
+        min-height: 330px;
+    }
+}
+
+#projects{
+    min-height: 830px;
+}
+
+.interactive-box::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    box-shadow: 0 5px 15px #505050;
+    opacity: 0;
+
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.interactive-box:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.055);
+}
+
+.interactive-box:hover::after{
+    opacity: 1;
+}
+
+.white-text{
+    color: white;
 }
 
 a.scroll-to{
-    color: green;
+    color: black;
 }
 a.scroll-to:hover{
     color: red;
@@ -25,15 +80,18 @@ hr{
 
 .section{
     height: 100vh;
+    min-height: 600px;
 }
 
 .section-title-container{
      height: 72px;
+     justify-content: center;
  }
 
 .section-title-fixed{
     position: fixed;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     font-size: 48px;
     text-align: center;
 }
@@ -56,15 +114,23 @@ hr{
     font-size: 1em;
 }
 
-#me{
-    background-color: #8cff9f;
+.bg-img{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#projects{
-    background-color: #ffa38c;
+
+.image-fit-width{
+    width: 100%;
 }
-#education{
-    background-color: #8cb8ff;
+
+#bg-computer{
+    background-image: url("../images/computer.jpg");
+    width: 100%;
 }
-#employment{
-    background-color: #ffff87;
+
+#google-play{
+    height: auto;
+    width: 240px;
 }
