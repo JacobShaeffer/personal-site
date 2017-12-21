@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+.dev{
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
 a.scroll-to{
     color: green;
 }
