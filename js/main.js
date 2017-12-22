@@ -4,8 +4,16 @@ var fontValues = [];
 var isFixed = [];
 var movingTitles;
 
+function reset(){
+    sectionTitles = null;
+    botValues = [];
+    fontValues = [];
+    isFixed = [];
+    movingTitles = null;
+}
+
 function setup(){
-    sectionTitles = $(".section-title");
+    sectionTitles = $(".section-title-handle");
     movingTitles = $(".moving-title");
 
     for(var i=0; i<movingTitles.length; i++){
@@ -33,7 +41,7 @@ function cssHasJavascript(){
     }
 }
 
-function unnammed(){
+function onScroll(){
     var windowBot = $(window).scrollTop() + $(window).height();
     var recalculate = [];
     var needsRecalulating = false;
@@ -97,17 +105,21 @@ function unnammed(){
     cssHasJavascript();
 }
 
-function onScroll(){
-    unnammed();
-}
-
 function main(){
 
     setup();
-    unnammed();
+    onScroll();
 
     $(window).scroll(
         $.throttle(10, function(){
+            onScroll();
+        })
+    );
+
+    $(window).resize(
+        $.throttle(1000, function(){
+            reset();
+            setup();
             onScroll();
         })
     );

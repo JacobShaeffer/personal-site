@@ -22,19 +22,20 @@
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-@media screen and (max-width: 575px) {/*<=small*/
+@media screen and (max-width: 767px) {/*<=small*/
     .interactive-box{
         min-height: 150px;
     }
 }
-@media screen and (min-width: 768px) {/*>=medium*/
+@media screen and (min-width: 992px) {/*>=medium*/
     .interactive-box{
         min-height: 330px;
     }
 }
 
 #projects{
-    min-height: 830px;
+    min-height: 870px;
+    height: auto;
 }
 
 .interactive-box::after {
