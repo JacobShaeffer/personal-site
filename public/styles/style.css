@@ -142,8 +142,27 @@ hr{
     font-size: 1em;
 }
 
-.image-fit-width{
-    width: 100%;
+.section-display-subtext{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.face-container{
+    height: 70vh;
+}
+.face{
+    min-height: 400px;
+}
+.face img{
+    max-width: 100%;
+    max-height: 70vh;
+    height: auto;
+}
+.face#left-face{
+    text-align: right;
 }
 
 .background-img{

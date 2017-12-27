@@ -22,6 +22,13 @@
 
         <div class="row background-img d-block">
             <div class="col-12">
+                <!-- 
+                    TODO: replace me with req/res text
+                        If there is no havascript we can just have the text statically here?
+                        Remove it when the page loads?
+
+                        maybe I'll just have a static picture here and remove that on load... not sure yet
+                -->
                 <img src="./images/bf.png" alt="A picture of my computer.">
             </div>
         </div>
@@ -55,20 +62,26 @@
                         </div>  
                     </div>
                 </div>
+                <div class="row" style="justify-content: center;">
+                    <div class="section-title">
+                        <div class="section-display-subtext">
+                            <a class="scroll-to" href="#mt_0">The Software Engineer</a>
+                        </div>  
+                    </div>
+                </div>
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
-                <div class="row">
-                    <div class="col-md-3 d-none d-md-block">
-                        <!-- TODO: I need more css -->
-                        <img class="image-fit-width" src="./images/face_left.png">
+                <div class="row face-container">
+                    <div class="col-md-3 d-none d-md-block face" id="left-face">
+                        <img src="./images/face_left_big.png">
                     </div>
                     <div class="col-md-6">
                         <p>I am a developer by profession, a designer for fun, and a pretty cool guy by nature.</p>
                         <p>More stuff needs to go here</p>
                         <!-- TODO: add more stuff here -->
+                        <!-- IDEA: make the text move as the mouse moves so that the cursor is never over top of text -->
                     </div>
-                    <div class="col-md-3 d-none d-md-block">
-                        <!-- TODO: I need more css -->
-                        <img class="image-fit-width" src="./images/face_right.png">
+                    <div class="col-md-3 d-none d-md-block face">
+                        <img src="./images/face_right_big.png">
                     </div>
                 </div>
             </div>
@@ -101,7 +114,7 @@
                                             <div class="col-md-6 d-none d-md-block">
                                                 <!-- TODO: try and center me vertically in frame -->
                                                 <!-- TODO: also replace me with a gif of the game -->
-                                                <img src="./images/ft.png" class="image-fit-width" style="max-height: 300px; max-width: 300px;">
+                                                <img src="./images/ft.png" style="max-height: 300px; max-width: 300px; width: 100%;">
                                             </div>
                                         </div>
                                     </div> 
@@ -118,7 +131,7 @@
                                                 <a href="" class="big-link">Play it here!</a>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: -->
+                                                <!-- TODO: add gif of game -->
 
                                             </div>
                                         </div>
@@ -137,7 +150,7 @@
                                                 <p>So I built one. If you are actually interested in what exactly I did you can <a href="">follow this link</a> to learn more about it. </p>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: -->
+                                                <!-- TODO: add rotating images -->
 
                                             </div>
                                         </div>
@@ -155,7 +168,6 @@
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
                                                 <!-- TODO: -->
-
                                             </div>
                                         </div>
                                     </div> 
@@ -172,24 +184,20 @@
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_2">Education</a>
+                            <a class="scroll-to" href="#mt_2">Me</a>
                         </div>
+                    </div>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <div class="section-title">
+                        <div class="section-display-subtext">
+                            <a class="scroll-to" href="#mt_0">The Person</a>
+                        </div>  
                     </div>
                 </div>
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="row">
-                            <div class="col">
-                                <img class="image-fit-width" id="educ-img-1" src="./images/ASU_horizontal_name.png" alt="ASU logo">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 offset-md-3">
-                                <p>I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in Computer Science in May of 2017.</p>
-                                <!-- TODO: Put something else here -->
-                            </div>
-                        </div>
                         <!--div class="row">
                             <div class="col">
                                 <img class="image-fit-width" id="educ-img-1" src="./images/gammage1.jpg" alt="Over head shot of ASU main campus.">
@@ -205,7 +213,7 @@
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_3">Employment</a>
+                            <a class="scroll-to" href="#mt_3">Education & Employment</a>
                         </div>
                     </div>
                 </div>
@@ -214,8 +222,19 @@
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
                         <div class="row normal-box">
                             <!-- TODO: -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="image-fit-width" id="educ-img-1" src="./images/ASU_horizontal_name.png" alt="ASU logo">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <p>I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in Computer Science in May of 2017.</p>
+                                        <!-- TODO: Put something else here -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

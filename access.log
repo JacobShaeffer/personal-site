@@ -1,0 +1,10 @@
+GET / 200 12337 - 4.056 ms
+GET /styles/style.css 200 2891 - 6.876 ms
+GET /js/main.js 200 5521 - 2.903 ms
+GET /images/bf.png 200 4433 - 0.599 ms
+GET /images/Projects.png 200 115429 - 1.182 ms
+GET /images/Employment.png 200 41076 - 0.442 ms
+GET /images/face_left.png 200 50297 - 0.324 ms
+GET /images/face_right.png 200 49608 - 0.322 ms
+GET /images/ft.png 200 2481 - 0.560 ms
+GET /images/ASU_horizontal_name.png 200 15653 - 0.674 ms
