@@ -14,11 +14,11 @@
     z-index: 1;
 }
 
-#me{
-    background-color: #ddd;
+#panel1{
+    background-color: #e4f1fe;
 }
-#education{
-    background-color: #ddd;
+#panel3{
+    background-color: #e4f1fe;
 }
 /*
 #projects{
@@ -55,6 +55,7 @@
     position: relative;
     display: block;
     background-color: white;
+    height: calc(100% - 30px);
     min-height: 210px;
     top: 0px;
     left: 0px;
@@ -167,7 +168,7 @@ hr{
 
 .background-img{
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: -1000;
 }
@@ -185,12 +186,57 @@ hr{
     font-size: 32px;
 }
 
-#projects{
-    min-height: 870px;
+.center{
+    top: 50%;
+    -ms-transform: translate(0, -50%); /* IE 9 */
+    -webkit-transform: translate(0, -50%); /* Safari */
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+}
+.center ul li{
+    display: flex;
+    justify-content: center;
+}
+
+#projects-fasttunnel-img{
+    position: relative;
+    top: 50%;
+    -ms-transform: translate(0, -50%); /* IE 9 */
+    -webkit-transform: translate(0, -50%); /* Safari */
+    transform: translate(0, -50%);
+    max-height: 300px; 
+    max-width: 300px; 
+    width: 100%;
+}
+
+#educ-img-1 img{
+    max-width: 100%;
+    max-height: 70vh;
     height: auto;
+}
+#educ-img-1{
+    text-align: center;
+}
+#empl-img-1{
+    text-align: center;
+}
+#empl-img-1 img{
+    max-width: 100%;
+    max-height: 70vh;
+    height: auto;
+}
+
+#panel2{
+    height: auto;
+    min-height: 100vh;
 }
 
 #google-play{
     height: auto;
     width: 240px;
+}
+
+#contact-information{
+    list-style: none;
 }

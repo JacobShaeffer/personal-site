@@ -53,19 +53,12 @@
             </div>
         </div>
 
-        <div class="row section moving-title floating-background" id="me">
+        <div class="row section moving-title floating-background" id="panel1">
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
                             <a class="scroll-to" href="#mt_0">Me</a>
-                        </div>  
-                    </div>
-                </div>
-                <div class="row" style="justify-content: center;">
-                    <div class="section-title">
-                        <div class="section-display-subtext">
-                            <a class="scroll-to" href="#mt_0">The Software Engineer</a>
                         </div>  
                     </div>
                 </div>
@@ -75,9 +68,49 @@
                         <img src="./images/face_left_big.png">
                     </div>
                     <div class="col-md-6">
-                        <p>I am a developer by profession, a designer for fun, and a pretty cool guy by nature.</p>
-                        <p>More stuff needs to go here</p>
-                        <!-- TODO: add more stuff here -->
+
+                        <p>
+                            I am a software engineer by education, by trade, and by choice. "If you do what you love, you'll 
+                            never work a day in your life." A popular if overused quote, but if it's true, then I'm in the 
+                            right field.
+                        </p>
+                        
+                        <h3>I'm good at:</h3>
+                        <ul>
+                            <li>C#</li>
+                            <li>HTML</li>
+                            <li>Javascript</li>
+                            <li>Java</li>
+                        </ul>
+                        <br>
+
+                        <h3>I'm okay at:</h3>
+                        <ul>
+                            <li>C &amp C++</li>
+                            <li>CSS</li>
+                        </ul>
+                        <br>
+                        
+
+                        <h3>I've seen before:</h3>
+                        <ul>
+                            <li>Google Firebase</li>
+                            <li>Microsoft Access</li>
+                            <li>Microsoft Visual Basic</li>
+                            <li>PHP</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                        <br>
+
+                        <h3>I want to learn:</h3>
+                        <ul>
+                            <li style="font-size: 2em;">
+                                EVERYTHING
+                            </li>
+                        </ul>
+                        
+
                         <!-- IDEA: make the text move as the mouse moves so that the cursor is never over top of text -->
                     </div>
                     <div class="col-md-3 d-none d-md-block face">
@@ -87,7 +120,7 @@
             </div>
         </div>
 
-        <div class="row section moving-title floating-background" id="projects">
+        <div class="row section moving-title floating-background" id="panel2">
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
@@ -98,23 +131,33 @@
                 </div>
                 <!-- TODO: Javascript these bitches to make them all the same height -->
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
-                <div class="row dev">
+                <div class="row">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row test">
                             <div class="col-lg-6">
                                 <div class="row interactive-box">
                                     <div class="col">
                                         <div class="row">
                                             <div class="col-md-6 ">
                                                 <h3>Fast Tunnel</h3>
-                                                <p>Fast Tunnel is a 2D arcade game I made for Android. The goal of the game is to travel as far as possible down an endless tunnel where a single mistake will mean the end of a run.</p>
-                                                <p>It's witten in Java in the Android Studio IDE. I used a game framework called <a href="https://libgdx.badlogicgames.com/">libGDX</a>.</p>
-                                                <a href='https://play.google.com/store/apps/details?id=com.shaeffer.jacob&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img id="google-play" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                                                <p>
+                                                    Is a 2D arcade game I made for Android. The goal of the game is to travel 
+                                                    as far as possible down an endless tunnel. It's more fun than that makes 
+                                                    it sound, I swear. The tunnel is constantly shifting and moving 
+                                                    constantly trying to kill the ship.
+                                                </p>
+                                                <p>
+                                                    It's witten in Java in the Android Studio IDE. I used a game framework 
+                                                    called <a href="https://libgdx.badlogicgames.com/">libGDX</a>.
+                                                </p>
+                                                <a href='https://play.google.com/store/apps/details?id=com.shaeffer.jacob&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                                                    <img id="google-play" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+                                                </a>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
                                                 <!-- TODO: try and center me vertically in frame -->
                                                 <!-- TODO: also replace me with a gif of the game -->
-                                                <img src="./images/ft.png" style="max-height: 300px; max-width: 300px; width: 100%;">
+                                                <img src="./images/ft.png" id="projects-fasttunnel-img">
                                             </div>
                                         </div>
                                     </div> 
@@ -126,28 +169,41 @@
                                         <div class="row">
                                             <div class="col-md-6 ">
                                                 <h3>Hotdog</h3>
-                                                <p>Ever wanted to play Connect-4 on a 3D game board? Yeah, me neither, but I made it anyway.</p>
-                                                <p>I made it with WebGL and Three.js for the rendering with a Node.js backend server using Socket.IO for client server communication. All of the game code is Javascript.</p>
-                                                <a href="" class="big-link">Play it here!</a>
+                                                <p>
+                                                    Ever wanted to play Connect-4 on a 3D game board? Yeah, me neither, but 
+                                                    I made it anyway.
+                                                </p>
+                                                <p>
+                                                    I made it with WebGL and Three.js for the rendering with a Node.js backend 
+                                                    server using Socket.IO for client server communication. All of the game 
+                                                    code is Javascript.
+                                                </p>
+                                                <a href="http://jacobshaeffer.com/internalLinks/Hotdog/" class="big-link">Play it here!</a>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
                                                 <!-- TODO: add gif of game -->
-
                                             </div>
                                         </div>
                                     </div> 
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row test">
                             <div class="col-lg-6">
                                 <div class="row interactive-box">
                                     <div class="col">
                                         <div class="row">
                                             <div class="col-md-6 ">
                                                 <h3>Raspberry Tart</h3>
-                                                <p>Some time ago I had the idea of making a portable Raspberri Pi. <a href="https://www.raspberrypi.org/">(In case you don't know what a Raspberry Pi is.)</a></p>
-                                                <p>So I built one. If you are actually interested in what exactly I did you can <a href="">follow this link</a> to learn more about it. </p>
+                                                <p>Some time ago I had the idea of making a portable Raspberri Pi. 
+                                                    <a href="https://www.raspberrypi.org/">
+                                                        (In case you don't know what a Raspberry Pi is.)
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    So I built one. If you are interested in what exactly I did, you can 
+                                                    <a href="">follow this link</a> to learn more. 
+                                                </p>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
                                                 <!-- TODO: add rotating images -->
@@ -162,12 +218,21 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="col-md-6 ">
-                                                <h3>Travel Activiy Collection App</h3>
-                                                <!-- TODO: -->
-                                                <p></p>
+                                                <h3>Travel Activiy Collection App (Taca)</h3>
+                                                <p>
+                                                    Is a crossplatform (iOS and Android) app that records the users location and 
+                                                    generates "Stops" from this data. This is for the Maricopa Association of 
+                                                    Governments and it is for a survey they conduct to improve their roadway 
+                                                    models.
+                                                </p>
+                                                <p>
+                                                    It is currently under development, but should be done and live on the Google 
+                                                    Play Store by mid 2018. The name will have also changed by then, Taca is 
+                                                    a temporary name we use to discuss it.
+                                                </p>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: -->
+                                                <!-- TODO: add picture -->
                                             </div>
                                         </div>
                                     </div> 
@@ -179,41 +244,61 @@
             </div>
         </div>
 
-        <div class="row section moving-title floating-background" id="education">
+        <div class="row section moving-title floating-background" id="panel3">
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_2">Me</a>
+                            <a class="scroll-to" href="#mt_2">Education&nbsp/&nbspEmployment</a>
                         </div>
-                    </div>
-                </div>
-                <div class="row" style="justify-content: center;">
-                    <div class="section-title">
-                        <div class="section-display-subtext">
-                            <a class="scroll-to" href="#mt_0">The Person</a>
-                        </div>  
                     </div>
                 </div>
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
                 <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <!--div class="row">
-                            <div class="col">
-                                <img class="image-fit-width" id="educ-img-1" src="./images/gammage1.jpg" alt="Over head shot of ASU main campus.">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col" id="educ-img-1">
+                                <img src="./images/ASU_horizontal_name.png" alt="ASU logo">
                             </div>
-                        </div-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <p>
+                                    I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in 
+                                    Computer Science in May of 2017.
+                                </p>
+                                <!-- TODO: Put something else here -->
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="empl-img-1">
+                                <img src="./images/MAG.png" alt="MAG logo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <p>
+                                    I currently work for the Maricopa Association of Governments 
+                                    <a href="http://azmag.gov">(MAG)</a> as a Software Development Intern. I am currently working 
+                                    on a crossplatform mobile app tentatively named Taca. A more detailed description can be 
+                                    found above in the <a href="#mt_1">projects</a> section.
+                                </p>
+                                <!-- TODO: Put something else here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row section moving-title floating-background" id="employment">
+        <div class="row section moving-title floating-background" id="panel4">
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_3">Education & Employment</a>
+                            <a class="scroll-to" href="#mt_3">Contact&nbspMe</a>
                         </div>
                     </div>
                 </div>
@@ -222,18 +307,11 @@
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
                         <div class="row normal-box">
                             <!-- TODO: -->
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <img class="image-fit-width" id="educ-img-1" src="./images/ASU_horizontal_name.png" alt="ASU logo">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 offset-md-3">
-                                        <p>I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in Computer Science in May of 2017.</p>
-                                        <!-- TODO: Put something else here -->
-                                    </div>
-                                </div>
+                            <div class="col center">
+                                <ul id="contact-information">
+                                    <li><a href="mailto:shaeffer.jacob@gmail.com">Shaeffer.Jacob@gmail.com</a></li>
+                                    <li>(602)881-6698</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

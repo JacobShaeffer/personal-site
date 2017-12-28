@@ -1,10 +1,10 @@
 var express = require('express');
-//var morgan = require('morgan');
-//var fs = require('fs');
+var morgan = require('morgan');
+var fs = require('fs');
 var app = express();
 
-//var accessLogStream = fs.createWriteStream((__dirname + '/access.log'), {flags: 'a'})
-//app.use(morgan('common', {stream: accessLogStream}));
+var accessLogStream = fs.createWriteStream((__dirname + '/access.log'), {flags: 'a'})
+app.use(morgan('tiny', {stream: accessLogStream}));
 
 app.use(express.static(__dirname + '/public'));
 
