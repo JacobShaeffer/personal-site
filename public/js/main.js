@@ -162,26 +162,39 @@ function onScroll(){
 ///Console simulation code
 
 var consoleText = "";
+var inputText = "";
+var consoleInput;
 var consoleHandle;
 var consoleCursor;
 
 function consoleSetup(){
-    let cons = $("#console");
+    let cons = $("#console-text");
     cons.html(
-        "<div class=\"console-text\"></div> <div class=\"cursor\" style=\"display: block\"></div> "
+        `
+        <div id="console-text-div">
+            
+        </div> 
+        <div id="console-input">
+            <div id="console-input-text"></div>
+            <div id="console-input-cursor" class="blinking-cursor">&nbsp</div>
+        </div>
+        `
     );
-    consoleHandle = $(".console-text");
-    consoleCursor = $(".cursor");
+    consoleHandle = $("#console-text-div");
+    consoleInput = $("#console-input-text");
+    consoleCursor = $("#console-input-cursor");
 }
 
 function typeOut(index, character){
-    consoleText += reqres[index].content[character];
-    consoleHandle.html(consoleText);
+    inputText += reqres[index].content[character];
+    consoleInput.html(inputText);
     if(reqres[index].content[character+1]){
         setTimeout(function(){ typeOut(index, character+1); }, 100);
     }
     else{
-        consoleText += "<br>";
+        inputText = "";
+        consoleInput.html("");
+        consoleText += "$" + reqres[index].content + "<br>";
         consoleHandle.html(consoleText);
         if(reqres[index+1]){
             setTimeout(function(){consoleSimulation(index+1);}, reqres[index].delay);
@@ -199,8 +212,8 @@ function consoleSimulation(index){
     if(line.printStyle == "typed"){
         consoleCursor.css("display", "block");
         if(line.newline){
-            consoleText += "$";
-            consoleHandle.html(consoleText);
+            inputText += "$";
+            consoleInput.html(inputText);
         }
         wait(index);
     }

@@ -23,14 +23,21 @@ body{
 #panel3{
     background-color: #e4f1fe;
 }
-/*
-#projects{
-    
+
+#console-input-cursor{
+    background-color: white;
+    margin-left: 2px;
 }
-#employment{
-    
+#console-input-cursor.blinking-cursor{
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
 }
-*/
+#console-input-cursor.no-blink{
+    opacity: 1;
+}
 
 .center-children {
     margin-top: 10px;
@@ -38,6 +45,13 @@ body{
 }
 .center-children > h4{
     margin: auto;
+}
+
+#console{
+    height: auto;
+}
+#console-input{
+    display: flex;
 }
 
 .small-box {
@@ -318,4 +332,52 @@ hr{
 
 #about-me{
     text-align: left;
+}
+
+
+/*Keyframes*/
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
 }
