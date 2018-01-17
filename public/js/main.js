@@ -1,3 +1,5 @@
+///On scroll code
+
 var sectionTitles;
 var botValues = [];// = [1.81, 1.47, 0.83, 0];
 var fontValues = [];
@@ -157,13 +159,70 @@ function onScroll(){
     cssHasJavascript();
 }
 
+///Console simulation code
+
+var consoleText = "";
+var consoleHandle;
+var consoleCursor;
+
+function consoleSetup(){
+    let cons = $("#console");
+    cons.html(
+        "<div class=\"console-text\"></div> <div class=\"cursor\" style=\"display: block\"></div> "
+    );
+    consoleHandle = $(".console-text");
+    consoleCursor = $(".cursor");
+}
+
+function typeOut(index, character){
+    consoleText += reqres[index].content[character];
+    consoleHandle.html(consoleText);
+    if(reqres[index].content[character+1]){
+        setTimeout(function(){ typeOut(index, character+1); }, 100);
+    }
+    else{
+        consoleText += "<br>";
+        consoleHandle.html(consoleText);
+        if(reqres[index+1]){
+            setTimeout(function(){consoleSimulation(index+1);}, reqres[index].delay);
+        }
+    }
+}
+
+function wait(index){
+    if(reqres[index].content)
+        setTimeout(function(){ typeOut(index, 0); }, reqres[index].startDelay);
+}
+
+function consoleSimulation(index){
+    let line = reqres[index];
+    if(line.printStyle == "typed"){
+        consoleCursor.css("display", "block");
+        if(line.newline){
+            consoleText += "$";
+            consoleHandle.html(consoleText);
+        }
+        wait(index);
+    }
+    else{
+        consoleCursor.css("display", "none");
+        consoleText += reqres[index].content + "<br>";
+        consoleHandle.html(consoleText);
+        if(reqres[index+1]){
+            setTimeout(function(){consoleSimulation(index+1);}, reqres[index].delay);
+        }
+    }
+}
+
+///MAIN
+
 function main(){
 
     setup();
     onScroll();
 
-    var xmlHttp = new XMLHttpRequest();
-    console.log(xmlHttp);
+    consoleSetup();
+    consoleSimulation(0);
 
     $(window).scroll(
         $.throttle(10, function(){
@@ -181,3 +240,31 @@ function main(){
 }
 
 $(document).ready(function(){main();});
+
+let reqres = [
+    { "content": "curl jacobshaeffer.com/ >> jacobshaeffer.html",                   "printStyle": "typed", "newline": true,  "delay": 500, "startDelay": 300 },
+    { "content": "status 200 after 4.056 ms content: document 12.3kb",              "printStyle": "post",  "newline": false, "delay": 400 },
+    { "content": "browser -l ./jacobshaeffer.html", 				                "printStyle": "typed", "newline": true,  "delay": 700, "startDelay": 500 },
+    { "content": "Parsing document",                 				                "printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /styles/style.css", 											"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /js/main.js", 												"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/bf.png", 												"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/Projects.png", 										"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/Employment.png", 										"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/face_left.png", 										"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/face_right.png", 										"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/ft.png", 												"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "GET /images/ASU_horizontal_name.png", 							"printStyle": "post",  "newline": false, "delay": 100 },
+    { "content": "Parse finished after 900 ms waiting for response", 				"printStyle": "post",  "newline": false, "delay": 300 },
+    { "content": "status: 200 after 6.876 ms content: stylesheet 2.9kb", 	        "printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 2.903 ms content: script 5.5kb", 				"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.599 ms content: png  4.4kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 1.182 ms content: png 11.5kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.442 ms content: png 1kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.324 ms content: png 50kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.322 ms content: png 49.6kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.560 ms content: png 2.5kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "status: 200 after 0.674 ms content: png 15.6kb", 					"printStyle": "post",  "newline": false, "delay": 50  },
+    { "content": "All content recieved - displaying page", 		        			"printStyle": "post",  "newline": false, "delay": 200  },
+    { "content": "", 		        			                                    "printStyle": "typed", "newline": true,  "delay": 50  }
+]

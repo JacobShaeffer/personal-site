@@ -1,0 +1,26 @@
+{
+	"strings": [
+		{ "content": "$Client: GET jacobshaeffer.com/ HTTP/1.1", 						"timeBeforeNext": 100 }, 
+		{ "content": "$Server: status 200 after 4.056 ms content: document 12.3kb", 	"timeBeforeNext": 100 },
+		{ "content": "$Client: parse html begin", 										"timeBeforeNext": 100 },
+		{ "content": "GET /styles/style.css", 											"timeBeforeNext": 100 },
+		{ "content": "GET /js/main.js", 												"timeBeforeNext": 100 },
+		{ "content": "GET /images/bf.png", 												"timeBeforeNext": 100 },
+		{ "content": "GET /images/Projects.png", 										"timeBeforeNext": 100 },
+		{ "content": "GET /images/Employment.png", 										"timeBeforeNext": 100 },
+		{ "content": "GET /images/face_left.png", 										"timeBeforeNext": 100 },
+		{ "content": "GET /images/face_right.png", 										"timeBeforeNext": 100 },
+		{ "content": "GET /images/ft.png", 												"timeBeforeNext": 100 },
+		{ "content": "GET /images/ASU_horizontal_name.png", 							"timeBeforeNext": 100 },
+		{ "content": "parse html end", 													"timeBeforeNext": 100 },
+		{ "content": "$Server: status: 200 after 6.876 ms content: stylesheet 2.9kb", 	"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 2.903 ms content: script 5.5kb", 				"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.599 ms content: png  4.4kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 1.182 ms content: png 11.5kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.442 ms content: png 1kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.324 ms content: png 50kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.322 ms content: png 49.6kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.560 ms content: png 2.5kb", 					"timeBeforeNext": 100 },
+		{ "content": "status: 200 after 0.674 ms content: png 15.6kb", 					"timeBeforeNext": 100 }
+	]
+}

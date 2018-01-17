@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
@@ -21,95 +23,169 @@
     <div class="content container-fluid">
 
         <div class="row background-img d-block">
-            <div class="col-12">
+            <div class="col-12" id="console">
                 <!-- 
                     TODO: replace me with req/res text
                         If there is no havascript we can just have the text statically here?
                         Remove it when the page loads?
 
                         maybe I'll just have a static picture here and remove that on load... not sure yet
+                
                 -->
-                <img src="./images/bf.png" alt="A picture of my computer.">
+                <!--
+                $Client: GET jacobshaeffer.com/ HTTP/1.1<br>
+                $Server: status 200 after 4.056 ms content: document 12.3kb<br>
+                $Client: parse html begin<br>
+                GET /styles/style.css<br>
+                GET /js/main.js<br>
+                GET /images/bf.png<br>
+                GET /images/Projects.png<br>
+                GET /images/Employment.png<br>
+                GET /images/face_left.png<br>
+                GET /images/face_right.png<br>
+                GET /images/ft.png<br>
+                GET /images/ASU_horizontal_name.png<br>
+                parse html end<br>
+                $Server: status: 200 after 6.876 ms content: stylesheet 2.9kb<br>
+                status: 200 after 2.903 ms content: script 5.5kb<br>
+                status: 200 after 0.599 ms content: png  4.4kb<br>
+                status: 200 after 1.182 ms content: png 11.5kb<br>
+                status: 200 after 0.442 ms content: png 1kb<br>
+                status: 200 after 0.324 ms content: png 50kb<br>
+                status: 200 after 0.322 ms content: png 49.6kb<br>
+                status: 200 after 0.560 ms content: png 2.5kb<br>
+                status: 200 after 0.674 ms content: png 15.6kb<br>
+                -->
             </div>
         </div>
 
         <div class="row background-img d-none">
             <div class="col-12">
-                <img src="./images/Projects.png" alt="A picture of my computer.">
+                <img src="./images/Projects.png" alt="">
             </div>
         </div>
 
         <div class="row background-img d-none">
             <div class="col-12">
-                <img src="./images/Employment.png" alt="A picture of my computer.">
+                <img src="./images/Employment.png" alt="">
             </div>
         </div>
 
         <div class="row section">
-            <div class="col-md-4 offset-md-4">
-                <div class="text-center vertical-center">
-                    <h1 class="white-text">Jacob Shaeffer</h1>
+            <div class="col-md-4 offset-md-4 text-center small-box">
+                <div>
+                    <h1 id="name">Jacob Shaeffer</h1>
+                    <h2 id="barcode">Jacob Shaeffer</h2>
                 </div>
             </div>
         </div>
 
         <div class="row section moving-title floating-background" id="panel1">
+            <!-- make this a left-shifted-box and put my picture on the right, the pic goes away on sm? and xs -->
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_0">Me</a>
+                            <a class="scroll-to" href="#mt_0">Summary</a>
                         </div>  
                     </div>
                 </div>
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
                 <div class="row face-container">
+
                     <div class="col-md-3 d-none d-md-block face" id="left-face">
                         <img src="./images/face_left_big.png">
                     </div>
                     <div class="col-md-6">
-
-                        <p>
-                            I am a software engineer by education, by trade, and by choice. "If you do what you love, you'll 
-                            never work a day in your life." A popular if overused quote, but if it's true, then I'm in the 
-                            right field.
-                        </p>
-                        
-                        <h3>I'm good at:</h3>
-                        <ul>
-                            <li>C#</li>
-                            <li>HTML</li>
-                            <li>Javascript</li>
-                            <li>Java</li>
-                        </ul>
-                        <br>
-
-                        <h3>I'm okay at:</h3>
-                        <ul>
-                            <li>C &amp C++</li>
-                            <li>CSS</li>
-                        </ul>
-                        <br>
-                        
-
-                        <h3>I've seen before:</h3>
-                        <ul>
-                            <li>Google Firebase</li>
-                            <li>Microsoft Access</li>
-                            <li>Microsoft Visual Basic</li>
-                            <li>PHP</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                        </ul>
-                        <br>
-
-                        <h3>I want to learn:</h3>
-                        <ul>
-                            <li style="font-size: 2em;">
-                                EVERYTHING
-                            </li>
-                        </ul>
-                        
+                        <div class="row normal-box">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-10 offset-md-1">
+                                        <p>Chris, help me write this part. Your good at this part.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 offset-1 center-children">
+                                        <h4>Skills</h4>
+                                    </div>
+                                    <div class="col-md-6 offset-md-3"><hr></div>
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="row" style="text-align: center;">
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Problem Solving
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Leadership
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Collaboration
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Public Speaking
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Flexibility
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Honesty
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Patience
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Stress Management
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Creative Thinking
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-4 col-12">
+                                                Critical Thinking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 offset-1 center-children">
+                                        <h4>Proficiencies</h4>
+                                    </div>
+                                    <div class="col-md-6 offset-md-3"><hr></div>
+                                    <div class="col-md-8 offset-md-2">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                Java
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                C#
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                HTML
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                CSS
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                PHP
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                Python
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                Node
+                                            </div>
+                                            <div class="col-lg-4 col-md-8 col-sm-4 col-8">
+                                                React-Native
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                                Android
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-2 col-4" style="color: red;">
+                                                MORE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- IDEA: make the text move as the mouse moves so that the cursor is never over top of text -->
                     </div>
@@ -155,9 +231,9 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: try and center me vertically in frame -->
-                                                <!-- TODO: also replace me with a gif of the game -->
-                                                <img src="./images/ft.png" id="projects-fasttunnel-img">
+                                                <!-- TODO: also replace me with a gif of the game >
+                                                <img src="./images/ft.png" id="projects-fasttunnel-img"-->
+                                                <img class="project-img" src="./images/ft.gif" id="projects-fasttunnel-img">
                                             </div>
                                         </div>
                                     </div> 
@@ -165,8 +241,8 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="row interactive-box">
-                                    <div class="col">
-                                        <div class="row">
+                                    <div class="col" style="height: 100%;">
+                                        <div class="row" style="height: 100%;">
                                             <div class="col-md-6 ">
                                                 <h3>Hotdog</h3>
                                                 <p>
@@ -181,7 +257,7 @@
                                                 <a href="http://jacobshaeffer.com/internalLinks/Hotdog/" class="big-link">Play it here!</a>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: add gif of game -->
+                                                <img class="project-img" src="./images/Hotdog.png" id="projects-hotdog-img">
                                             </div>
                                         </div>
                                     </div> 
@@ -232,7 +308,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-md-6 d-none d-md-block">
-                                                <!-- TODO: add picture -->
+                                                <img class="project-img" src="./images/TacaScreenCap.png" id="projects-taca-img">
                                             </div>
                                         </div>
                                     </div> 
@@ -245,6 +321,7 @@
         </div>
 
         <div class="row section moving-title floating-background" id="panel3">
+            <!-- make it two boxes, left and right, but form into one on smaller screens, md down?-->
             <div class="container-fluid">
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
@@ -255,37 +332,41 @@
                 </div>
                 <div class="row"><div class="col-md-4 offset-md-4"><hr></div></div>
                 <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col" id="educ-img-1">
-                                <img src="./images/ASU_horizontal_name.png" alt="ASU logo">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 offset-md-3">
-                                <p>
-                                    I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in 
-                                    Computer Science in May of 2017.
-                                </p>
-                                <!-- TODO: Put something else here -->
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col" id="empl-img-1">
-                                <img src="./images/MAG.png" alt="MAG logo">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 offset-md-3">
-                                <p>
-                                    I currently work for the Maricopa Association of Governments 
-                                    <a href="http://azmag.gov">(MAG)</a> as a Software Development Intern. I am currently working 
-                                    on a crossplatform mobile app tentatively named Taca. A more detailed description can be 
-                                    found above in the <a href="#mt_1">projects</a> section.
-                                </p>
-                                <!-- TODO: Put something else here -->
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row normal-box">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col" id="educ-img-1">
+                                        <img src="./images/ASU_horizontal_name.png" alt="ASU logo">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <p>
+                                            I graduated from ASU's Ira A. Fulton Schools of Engineering with a Bachelores in 
+                                            Computer Science in May of 2017.
+                                        </p>
+                                        <!-- TODO: Put something else here -->
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" id="empl-img-1">
+                                        <img src="./images/MAG.png" alt="MAG logo">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <p>
+                                            I currently work for the Maricopa Association of Governments 
+                                            <a href="http://azmag.gov">(MAG)</a> as a Software Development Intern. I am currently working 
+                                            on a crossplatform mobile app tentatively named Taca. A more detailed description can be 
+                                            found above in the <a href="#mt_1">projects</a> section.
+                                        </p>
+                                        <!-- TODO: Put something else here -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -298,7 +379,7 @@
                 <div class="row section-title-container">
                     <div class="section-title-handle section-title">
                         <div class="section-display-text">
-                            <a class="scroll-to" href="#mt_3">Contact&nbspMe</a>
+                            <a class="scroll-to" href="#mt_3">About&nbspMe</a>
                         </div>
                     </div>
                 </div>
@@ -307,11 +388,43 @@
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
                         <div class="row normal-box">
                             <!-- TODO: -->
-                            <div class="col center">
-                                <ul id="contact-information">
-                                    <li><a href="mailto:shaeffer.jacob@gmail.com">Shaeffer.Jacob@gmail.com</a></li>
-                                    <li>(602)881-6698</li>
-                                </ul>
+                            <div class="col center-vert">
+                                <div class="row">
+                                    <div class="col-10 offset-1" id="about-me">
+                                        <p>
+                                            Of course none of the above really says much about me. Sure it 
+                                            shows what I can do with a computer, but that doesn't say much 
+                                            about me as a person.
+                                        </p>
+                                        <p>
+                                            That being said, most of my time is spent on a computer. If I'm
+                                            not watching Youtube, or Twitch then I am working on one of my 
+                                            many personal projects. But even if I am working on a project I 
+                                            will almost certainly have Youtube or Twitch still open on one 
+                                            of my other monitors. They just won't be the focus of my full 
+                                            attention.
+                                        </p>
+                                        <p>
+                                            But as I have alluded to, I also do things that have nothing to 
+                                            do with computers. I enjoy playing Dungeons&ampDragons with my 
+                                            friends. We try to play weekly, but sometimes it's hard to 
+                                            coordinate five people who all have seperate lives. I am also 
+                                            an avid woodworker. My garage is filled with large power tools. 
+                                            I have a chop saw, a table saw, a band saw, but the tool I love 
+                                            above all the others is my Atlas 7122 wood lathe. I can be on 
+                                            that thing for hours at a time.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" id="contact-information">
+                                        <h5>Get in touch</h5>
+                                        <ul>
+                                            <li><a href="mailto:shaeffer.jacob@gmail.com">Shaeffer.Jacob@gmail.com</a></li>
+                                            <li>(602)881-6698</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
