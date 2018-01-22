@@ -73,15 +73,15 @@ body{
     border-radius: 5px;
     display: block;
     background-color: white;
-    height: 30%;
-    top: 50%;
+    top: 25vh;
+    height: 30vh;
     left: 50%;
     margin: 20px 5px;
     padding: 3px;
     box-shadow: 0px 1px 2px #808080;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); /* IE 9 */
-    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%); /* IE 9 */
+    -webkit-transform: translate(-50%, 0%); /* Safari */
 }
 
 .small-box div{
@@ -99,24 +99,6 @@ body{
 
 .small-box #name{
     font-family: 'Lato', sans-serif;
-}
-
-.normal-box {
-    position: relative;
-    opacity: 0.9;
-    border-radius: 5px;
-    display: block;
-    background-color: white;
-    height: 80vh;
-    top: 0px;
-    left: 0px;
-    margin: 20px 5px;
-    padding: 15px;
-    box-shadow: 0px 1px 2px #808080;
-}
-
-.normal-box#educ-empl{
-    min-height: 645px;
 }
 
 .interactive-box{
@@ -175,8 +157,8 @@ hr{
 }
 
 .section{
-    height: 100vh;
-    min-height: 600px;
+    /*height: 100vh;*/
+    min-height: 100vh;
 }
 
 .section-title-container{
@@ -387,4 +369,19 @@ hr{
   50% {
     background-color: white;
   }
+}
+
+.test-box {
+    border-radius: 5px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.test-box .col{
+    padding: 15px;
+}
+
+.test-box#summary-box {
+    min-height: 80vh;
 }
