@@ -158,7 +158,7 @@ hr{
 
 .section{
     /*height: 100vh;*/
-    min-height: 100vh;
+    min-height: 100vh !important;
 }
 
 .section-title-container{
