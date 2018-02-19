@@ -241,6 +241,9 @@ hr{
 .face#left-face{
     text-align: right;
 }
+.face#left-face img{
+    border-radius: 10px;
+}
 
 .background-img{
     position: fixed;
