@@ -44,7 +44,7 @@ body{
 }
 
 #panel1{
-    background-color: #4682B4;
+    background-color: #38ada9;
 }
 #panel2{
     height: auto;
@@ -53,7 +53,7 @@ body{
 #panel3{
     height: auto;
     min-height: 900px;
-    background-color: #ffaa33;
+    background-color: #3c6382;
 }
 
 #console-input-cursor{
@@ -221,10 +221,7 @@ hr{
     font-size: 0.75em;
 }
 
-.face-container{
-    height: 80vh;
-    min-height: 480px;
-}
+
 .face{
     min-height: 400px;
 }
@@ -402,8 +399,4 @@ hr{
 
 .test-box .col{
     padding: 15px;
-}
-
-.test-box#summary-box {
-    min-height: 80vh;
 }
