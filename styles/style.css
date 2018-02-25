@@ -44,7 +44,7 @@ body{
 }
 
 #panel1{
-    background-color: #38ada9;
+    background-color: #f7b731;
 }
 #panel2{
     height: auto;
@@ -53,7 +53,7 @@ body{
 #panel3{
     height: auto;
     min-height: 900px;
-    background-color: #3c6382;
+    background-color: #f7b731;/*#3c6382;*/
 }
 
 #console-input-cursor{
