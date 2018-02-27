@@ -81,6 +81,7 @@ body{
 
 #console{
     height: auto;
+    font-size: 14px;
 }
 #console-input{
     display: flex;
