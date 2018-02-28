@@ -1,9 +1,15 @@
 body{
     font-family: 'Lato', sans-serif;
-    min-width: 576px;
+    min-width: 360px;
 }
 /*284*/
 @media screen and (max-width: 767px) {/*<=small*/
+    #name{
+        font-size: 1.75em;
+    }
+    #barcode{
+        display: none;
+    }
     .interactive-box{
         min-height: 150px;
     }
