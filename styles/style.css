@@ -25,6 +25,16 @@ body{
         font-size: 1rem;
     }
 }
+@media screen and (min-width: 1800px) {/*2k*/
+    body{
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 3000) {/*4k*/
+    body{
+        font-size: 1em;
+    }
+}
 
 .carousel-indicators li{
     background-color: #333;
