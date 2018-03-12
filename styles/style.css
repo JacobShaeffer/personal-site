@@ -1,6 +1,7 @@
 body{
     font-family: 'Lato', sans-serif;
     min-width: 360px;
+
 }
 /*284*/
 @media screen and (max-width: 767px) {/*<=small*/
@@ -25,15 +26,57 @@ body{
         font-size: 1rem;
     }
 }
-@media screen and (min-width: 1800px) {/*2k*/
-    body{
-        font-size: 1em;
+@media screen and (min-width: 2800px) {/*3k?*/
+    .font-grow {
+        font-size: 1.75em;
+    }
+    h1.font-grow {
+        font-size: 5.75em;
+    }
+    h2.font-grow {
+        font-size: 4.75em;
+    }
+    h5.font-grow {
+        font-size: 1.25em;
+    }
+    #about-me{
+        font-size: 1.75em;
+    }
+    
+    #educ-img-1 img{
+        height: 30vh !important;
+    }
+    #empl-img-1 img{
+        height: 30vh !important;
     }
 }
-@media screen and (min-width: 3000) {/*4k*/
-    body{
-        font-size: 1em;
+@media screen and (min-width: 3800px) {/*4k*/
+    .font-grow {
+        font-size: 2.25em;
     }
+    h1.font-grow {
+        font-size: 6.25em;
+    }
+    h2.font-grow {
+        font-size: 5.25em;
+    }
+    h5.font-grow {
+        font-size: 1.75em;
+    }
+    #about-me{
+        font-size: 2.25em;
+    }
+    
+    #educ-img-1 img{
+        height: 30vh !important;
+    }
+    #empl-img-1 img{
+        height: 30vh !important;
+    }
+}
+
+.contact-li li{
+    font-size: 24px;
 }
 
 .carousel-indicators li{
@@ -198,8 +241,8 @@ hr{
 }
 
 .section-title-container{
-     height: 72px;
-     justify-content: center;
+    height: 72px;
+    justify-content: center;
  }
 
 .section-title-fixed{
@@ -237,7 +280,6 @@ hr{
     font-weight: bold;
     font-size: 0.75em;
 }
-
 
 .face{
     min-height: 400px;
