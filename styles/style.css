@@ -44,10 +44,10 @@ body{
     }
     
     #educ-img-1 img{
-        height: 30vh !important;
+        height: 20vh !important;
     }
     #empl-img-1 img{
-        height: 30vh !important;
+        height: 20vh !important;
     }
 }
 @media screen and (min-width: 3800px) {/*4k*/
@@ -68,10 +68,10 @@ body{
     }
     
     #educ-img-1 img{
-        height: 30vh !important;
+        height: 20vh !important;
     }
     #empl-img-1 img{
-        height: 30vh !important;
+        height: 20vh !important;
     }
 }
 
@@ -354,7 +354,7 @@ hr{
     -webkit-transform: translate(-50%, -50%); /* Safari */
     transform: translate(-50%, -50%);
     max-height: 400px; 
-    width: 100%;
+    width: auto;
 }
 
 #projects-fasttunnel-img{
